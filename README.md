@@ -4,7 +4,9 @@ Nine Day Detective is a student project that aims to replicate the escape room e
 # To-Do List 
 Please edit as needed.
 
-[_] Finish Blender Objects
+- [] Finish Blender Objects
+- [] _____
+- [] _____
 
 # Background 
 
