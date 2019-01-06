@@ -17,7 +17,7 @@ Please edit as needed.
 
 ## Game Premise
 Nine is a keen student heavily involved in her high school's Escape Room Club. As a result, her older brother decides to play a 
-fun prank on her and traps her in his café, with only one secret way to get out. Help Nine find all the clues necessary for her escape!
+fun prank on her and traps her in his café, with only one hidden way to get out. Help Nine find all the clues necessary for her escape!
 
 ## About Us
 The students involved in this project all attend the University of California: San Diego and are members of Triton XR:
