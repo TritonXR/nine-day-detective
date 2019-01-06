@@ -1,5 +1,5 @@
 # Nine Day Detective
-Nine Day Detective is a student project that aims to replicate the escape room experience in a virtual reality environment.
+Nine Day Detective is a student project that aims to replicate the mystery and excitement of an escape room experience in a virtual reality environment.
 
 # Scheduling
 
