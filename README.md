@@ -1,7 +1,12 @@
 # Nine Day Detective
 Nine Day Detective is a student project that aims to replicate the escape room experience in a virtual reality environment.
 
-# To-Do List 
+# Scheduling
+
+## Meetings
+Meetings are now held twice a week, with the first one on this Friday, January 11th from 3 - 5 pm. Please attend at least one each week!
+
+## To-Do List 
 Please edit as needed.
 
 - [ ] Finish Blender Objects
