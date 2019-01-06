@@ -6,10 +6,6 @@ Please edit as needed.
 
 [] Finish Blender Objects
 
-[] ______
-
-[] ______
-
 # Background 
 
 ## Game Premise
