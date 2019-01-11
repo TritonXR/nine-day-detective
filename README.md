@@ -10,8 +10,8 @@ Meetings are now held twice a week, with the first one on *Friday, January 11th 
 Please edit as needed.
 
 - [ ] Finish Blender Objects
-- [ ] _____
-- [ ] _____
+- [ ] Finish Coding parts
+- [ ] Test and debug
 
 # Background 
 
