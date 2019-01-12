@@ -8,15 +8,15 @@ Make sure to comment this everytime something was updated:
 	
 # Groups 
 1. Cabinets, counter, coffee machine (flipping and fillig the mugs, opening the cabinet and cashier)
-- Elton 
+	- Elton 
 
-2. Books on the shelf (picking them up, pop-up window)
-- Christina
-- Davin
+2. Books on the shelf and stuff on the table (picking them up, pop-up window)
+	- Christina
+	- Davin
 
 3. Puzzle, pin on the door to exit the cafe (pop-up windows)
-- Anthony 
-- Titan 
+	- Anthony 
+	- Titan 
 	
 # Scheduling
 - Winter 2019
