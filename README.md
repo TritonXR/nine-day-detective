@@ -6,10 +6,13 @@ Make sure to comment this everytime something was updated:
 
 	"update Jan 11" - "(what was updated)"
 	
-# Groups
-1. Cabinets, drawers, moving table, coffee machine, mugs
-2. Books (picking them up, pop-up window, etc.)
+# Groups 
+1. Cabinets, counter, coffee machine (flipping and fillig the mugs, opening the cabinet and cashier)
+- Elton Ho
+2. Books on the shelf (picking them up, pop-up window)
 3. Puzzle, pin on the door to exit the cafe (pop-up windows)
+- Anthony Fong
+- Titan Ngo
 	
 # Scheduling
 - Winter 2019
