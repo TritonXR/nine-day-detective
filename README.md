@@ -7,7 +7,7 @@ Make sure to comment this everytime something was updated:
 	"update Jan 11" - "(what was updated)"
 	
 # Groups 
-1. Cabinets, counter, coffee machine (flipping and fillig the mugs, opening the cabinet and cashier)
+1. Cabinets, counter, coffee machine (flipping and filling the mugs, opening the cabinet and cashier)
 	- Elton 
 
 2. Books on the shelf and stuff on the table (picking them up, pop-up window)
