@@ -1,6 +1,16 @@
 # Nine Day Detective
 Nine Day Detective is a student project that aims to replicate the mystery and excitement of an escape room experience in a virtual reality environment.
 
+# Update Syntax
+Make sure to comment this everytime something was updated:
+
+	"update Jan 11 - (what was updated)"
+	
+# Groups
+1. Cabinets, drawers, moving table, coffee machine, mugs
+2. Books (picking them up, pop-up window, etc.)
+3. Puzzle, pin on the door to exit the cafe (pop-up windows)
+	
 # Scheduling
 - Winter 2019
 - Week 1 - 2
@@ -19,7 +29,7 @@ Meetings are now held twice a week, with the first one on *Friday, January 11th 
 
 - [ ] Finish Blender objects and interior setting
 - [ ] Finish Coding parts
-- [ ] Test and debug
+- [ ] Test and debug (start texting in Rift by Week 3)
 
 # Background 
 
