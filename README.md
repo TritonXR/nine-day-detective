@@ -4,7 +4,7 @@ Nine Day Detective is a student project that aims to replicate the mystery and e
 # Update Syntax
 Make sure to comment this everytime something was updated:
 
-	"update Jan 11 - (what was updated)"
+	"update Jan 11" - "(what was updated)"
 	
 # Groups
 1. Cabinets, drawers, moving table, coffee machine, mugs
