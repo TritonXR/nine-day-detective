@@ -12,6 +12,7 @@ Make sure to comment this everytime something was updated:
 
 2. Books on the shelf (picking them up, pop-up window)
 - Christina
+- Davin
 
 3. Puzzle, pin on the door to exit the cafe (pop-up windows)
 - Anthony 
