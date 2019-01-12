@@ -12,8 +12,6 @@ Nine Day Detective is a student project that aims to replicate the mystery and e
 - Week 10
 	Possible showcase
 
-
-
 ## Meetings
 Meetings are now held twice a week, with the first one on *Friday, January 11th from 3 - 5 pm*. Please attend at least one each week!
 
