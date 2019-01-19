@@ -2,9 +2,9 @@
 Nine Day Detective is a student project that aims to replicate the mystery and excitement of an escape room experience in a virtual reality environment.
 
 # Update Syntax
-Make sure to comment this everytime something was updated:
+Make sure to comment this everytime a commit is made:
 
-	"update Jan 11" - "(what was updated)"
+	"update Jan 11" - "(description of what was changed/updated)"
 	
 # Groups 
 1. Cabinets, counter, coffee machine (flipping and filling the mugs, opening the cabinet and cash register)
