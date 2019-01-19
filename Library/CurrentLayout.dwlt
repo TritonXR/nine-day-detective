@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 481, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 81
+  controlID: 131
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 101
+  controlID: 90
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,7 +194,7 @@ MonoBehaviour:
     y: 0
     width: 1474
     height: 821
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &9
 MonoBehaviour:
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 102
+  controlID: 91
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,14 +329,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Kyu\Desktop\nine-day-detective
+  m_LastProjectPath: C:\Users\Kyu\Documents\GitHub\nine-day-detective
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 622b0000
-    m_LastClickedID: 11106
-    m_ExpandedIDs: 00000000622b000000ca9a3b
+    m_SelectedIDs: 782b0000
+    m_LastClickedID: 11128
+    m_ExpandedIDs: 00000000782b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000622b0000
+    m_ExpandedIDs: 00000000782b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -416,7 +416,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 14}
+    m_ScrollPosition: {x: 0, y: 121}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &14
@@ -479,10 +479,10 @@ MonoBehaviour:
     height: 750
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: e4e6ffff00000000
+    scrollPos: {x: 0, y: 355}
+    m_SelectedIDs: ae8afdff
+    m_LastClickedID: -161106
+    m_ExpandedIDs: 42f2ffff3cf9ffff0000000056360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,14 +532,14 @@ MonoBehaviour:
     height: 327
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4418.197963300375
+  lastFramingTime: 127.22448258806314
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 88.78974, y: -109.40221, z: -279.38574}
+    m_Target: {x: 4.5924015, y: -56.882378, z: -37.435028}
     speed: 2
-    m_Value: {x: 88.78974, y: -109.40221, z: -279.38574}
+    m_Value: {x: 4.5924015, y: -56.882378, z: -37.435028}
   m_RenderMode: 2
   m_CameraMode:
     drawMode: 2
@@ -567,13 +567,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.028495958, y: 0.97138214, z: -0.17435957, w: 0.15875606}
+    m_Target: {x: -0.03056972, y: 0.8229434, z: -0.5655539, w: -0.04448128}
     speed: 2
-    m_Value: {x: 0.028495958, y: 0.97138214, z: -0.17435957, w: 0.15875605}
+    m_Value: {x: -0.03056972, y: 0.8229434, z: -0.5655539, w: -0.04448128}
   m_Size:
-    m_Target: 421.5255
+    m_Target: 202.53714
     speed: 2
-    m_Value: 421.5255
+    m_Value: 202.53714
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -620,10 +620,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -495
-    m_HBaseRangeMax: 495
-    m_VBaseRangeMin: -192.5
-    m_VBaseRangeMax: 192.5
+    m_HBaseRangeMin: -396
+    m_HBaseRangeMax: 396
+    m_VBaseRangeMin: -154
+    m_VBaseRangeMax: 154
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 990, y: 402}
+  m_LastWindowPixelSize: {x: 1237.5, y: 502.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
