@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{DFC6C8EE-FA71-A63C-7D20-99959A9BD6B5}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Camera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIController.cs">
     <Files>
       <File FileName="../../../Dustin's Dumpster Diving Adventure/Assets/gamecontroller.cs" Line="15" Column="6" />
       <File FileName="Assets/Scripts/CharacterMovement.cs" Line="20" Column="34" />
-      <File FileName="Assets/Scripts/ReticleSelector.cs" Line="6" Column="16" />
-      <File FileName="Assets/Scripts/Camera.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/ReticleSelector.cs" Line="7" Column="31" />
+      <File FileName="Assets/Scripts/Cam.cs" Line="5" Column="16" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="18" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
           <Node name="nine-day-detective" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Camera.cs" selected="True" />
+                <Node name="UIController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +22,7 @@
       </Pad>
       <Pad Id="ClassPad">
         <State name="__root__">
-          <Node name="nine-day-detective" selected="True" />
+          <Node name="nine-day-detective" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
