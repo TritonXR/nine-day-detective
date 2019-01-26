@@ -61,8 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Cam.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\Highlighter.cs" />
+    <Compile Include="Assets\Scripts\ReticleSelector.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/davintjong/Desktop/Code/nine-day-detective/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
