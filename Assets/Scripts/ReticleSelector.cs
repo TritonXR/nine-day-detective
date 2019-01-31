@@ -5,10 +5,12 @@ using UnityEngine;
 public class ReticleSelector : MonoBehaviour {
     public Camera camera;
     public GameObject KeyBook;
+    public UIController controller;
 
 	// Use this for initialization
 	void Start () {
         camera = GetComponent<Camera>();
+        controller = GetComponentInChildren<UIController>();
 	}
 
     Transform highlighted;
@@ -28,6 +30,7 @@ public class ReticleSelector : MonoBehaviour {
                             foreach (Material m in KeyBook.GetComponent<Renderer>().materials)
                             {
                                 m.color = Color.white;
+                                controller.lookingAtBook = false;
                             }
                         }
                     }
@@ -35,6 +38,8 @@ public class ReticleSelector : MonoBehaviour {
                     {
                         foreach (Material m in KeyBook.GetComponent<Renderer>().materials) {
                             m.color = Color.black; 
+                            controller.lookingAtBook = true;
+                            controller.bookOpen = false;
                         }
                     }
                     highlighted = hit.transform;
