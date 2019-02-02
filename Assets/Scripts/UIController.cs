@@ -41,6 +41,8 @@ public class UIController : MonoBehaviour {
                 }
             }
             popup.gameObject.SetActive(bookOpen);
+        } else {
+            bookOpen = false;
         }
 	}
 

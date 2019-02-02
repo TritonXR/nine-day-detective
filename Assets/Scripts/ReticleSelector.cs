@@ -13,7 +13,7 @@ public class ReticleSelector : MonoBehaviour {
         controller = GetComponentInChildren<UIController>();
 	}
 
-    Transform highlighted;
+    Highlightable highlighted;
 	// Update is called once per frame
 	void Update () {
         RaycastHit hit;
@@ -21,32 +21,28 @@ public class ReticleSelector : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log(hit.transform);
-            if(hit.transform.GetComponent<Renderer>() != null) {
-                if(hit.transform != highlighted) {
-                    if(highlighted != null) {
-                        if (highlighted.parent == KeyBook.transform)
-                        {
-                            foreach (Material m in KeyBook.GetComponent<Renderer>().materials)
-                            {
-                                m.color = Color.white;
-                                controller.lookingAtBook = false;
-                            }
-                        }
-                    }
-                    if (hit.transform.parent == KeyBook.transform)
+            Highlightable target = hit.transform.GetComponent<Highlightable>();
+            if (target != highlighted)
+            {
+                if (highlighted != null)
+                {
+                    highlighted.Deselect();
+                    if (highlighted.transform.parent == KeyBook.transform)
                     {
-                        foreach (Material m in KeyBook.GetComponent<Renderer>().materials) {
-                            m.color = Color.black; 
-                            controller.lookingAtBook = true;
-                            controller.bookOpen = false;
-                        }
+                        controller.lookingAtBook = false;
                     }
-                    highlighted = hit.transform;
-                } 
+                }
             }
-
+            if (hit.transform.parent == KeyBook.transform)
+            {
+                controller.lookingAtBook = true;
+            }
+            target.Highlight();
+            highlighted = target;
             // Do something with the object that was hit by the raycast.
-        }        
+        }
+        else if (highlighted != null) {
+            highlighted.Deselect();
+        }
 	}
 }
