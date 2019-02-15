@@ -14,12 +14,10 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float translation = Input.GetAxis("Vertical") * speed;
-        float straffe = Input.GetAxis("Horizontal") * speed;
+        Vector2 translation = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick) * speed;
         translation *= Time.deltaTime;
-        straffe *= Time.deltaTime;
 
-        transform.Translate(straffe, 0, translation);
+        transform.position += new Vector3(translation.x, translation.y, 0);
 
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
