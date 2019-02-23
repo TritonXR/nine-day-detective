@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ReticleSelector : MonoBehaviour {
     public Camera camera;
     public GameObject KeyBook;
@@ -37,8 +38,12 @@ public class ReticleSelector : MonoBehaviour {
             {
                 controller.lookingAtBook = true;
             }
-            target.Highlight();
-            highlighted = target;
+            if(target != null)
+            {
+                target.Highlight();
+                highlighted = target;
+          
+            }
             // Do something with the object that was hit by the raycast.
         }
         else if (highlighted != null) {
