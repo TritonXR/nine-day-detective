@@ -46,7 +46,6 @@ fun prank on her and traps her in his café, with only one hidden way to get out
 The students involved in this project all attend the **University of California: San Diego** and are members of Triton XR:
 - **Wen Chen (project lead)**
 - Christina Chan     
-- Sabrina Du  
 - Anthony Fong  
 - Elton Ho  
 - Jonathan Moon  
