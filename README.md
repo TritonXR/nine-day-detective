@@ -1,10 +1,5 @@
 # Nine Day Detective
 Nine Day Detective is a student project that aims to replicate the mystery and excitement of an escape room experience in a virtual reality environment.
-
-# Update Syntax
-Make sure to comment this everytime a commit is made:
-
-	"update Jan 11" - "(description of what was changed/updated)"
 	
 # Groups 
 1. Cabinets, counter, coffee machine (flipping and filling the mugs, opening the cabinet and cash register)
@@ -51,7 +46,6 @@ fun prank on her and traps her in his café, with only one hidden way to get out
 The students involved in this project all attend the **University of California: San Diego** and are members of Triton XR:
 - **Wen Chen (project lead)**
 - Christina Chan     
-- Sabrina Du  
 - Anthony Fong  
 - Elton Ho  
 - Jonathan Moon  

@@ -224,5 +224,7 @@ public class Keypad : MonoBehaviour
 	// Second swap
 	buttonList.RemoveAt(button2Index);
 	buttonlist.Insert(button2Index, button1);
+    	
+	Debug.log("swapped " + button1 + "and " button2)'
     }
 }
