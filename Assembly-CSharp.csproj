@@ -353,6 +353,7 @@
     <Compile Include="Assets\Scripts\Horizontal_Movement.cs" />
     <Compile Include="Assets\Scripts\ReticleSelector.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\yeet.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Samples\CrossPlatform\Readme.txt" />

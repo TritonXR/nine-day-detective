@@ -13,12 +13,23 @@ public class Highlightable : MonoBehaviour {
 	void Update () {
 	}
 
-    public void Highlight() {
+    public void OnVREnter() {
         GetComponent<Renderer>().enabled = true;
         Debug.Log(GetComponent<Renderer>());
     }
 
-    public void Deselect() {
+    public void OnVRExit() {
+        GetComponent<Renderer>().enabled = false;
+    }
+
+    public void Highlight()
+    {
+        GetComponent<Renderer>().enabled = true;
+        Debug.Log(GetComponent<Renderer>());
+    }
+
+    public void Deselect()
+    {
         GetComponent<Renderer>().enabled = false;
     }
 }
