@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Keypad : MonoBehaviour
+public class DoorKeypad : MonoBehaviour
 {
 
     public string curPassword = "12345";
