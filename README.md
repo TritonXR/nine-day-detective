@@ -9,7 +9,6 @@ Nine Day Detective is a student project that aims to replicate the mystery and e
 2. Books on the shelf and stuff on the table (picking them up, pop-up window)
 	- Christina
 	- Davin
-	- Sabrina
 
 3. Puzzle, pin on the door to exit the cafe (pop-up windows)
 	- Anthony 
@@ -17,24 +16,31 @@ Nine Day Detective is a student project that aims to replicate the mystery and e
 	- Nathan
 	
 # Scheduling
-- Winter 2019
-- Week 1 - 2
-  Finishing the interior setting and apply the physical property to all the items
-- Week 3 - 7
-  Coding, adding interaction between character and objects 
-- Week 8 - 9
-  Debug
+- Spring 2019
+- Week 1 - 3
+Finish basic graphic design for the album, map and icon. Finish getting input from the keypad from raycaster.
+Finish motion of picking up the cup.
+Start to work on the coffee maker animation and motion. Start to work on Graphic control (in canvas) for the puzzle.
+Reiterate through the storyboard and test the smoothness of the experience.
+Fix some micro parts in the environment and change the control of light source.
+
+- Week 4 - 6
+Fix and update user experience, improve quality.
+
+- Week 7 - 9
+Possibly working on the external environment and the kitchen. Game testing and bug fixing.
+
 - Week 10
-  Showcase of demo
+  Showcase of demo!!
 
 ## Meetings
-Meetings are now held twice a week, with the next one on *Friday, January 18th from 3:30 - 5:30 pm*. Please attend at least one each week!
+Weekly meeting time will be announced soon for SP19
 
 ## To-Do List 
 
-- [ ] Finish Blender objects and interior setting
-- [ ] Finish Coding parts
-- [ ] Test and debug (start texting in Rift by Week 3)
+- [ ] Finish basic motion control
+- [ ] Finish coding parts
+- [ ] Test and debug
 
 # Background 
 
