@@ -18,12 +18,12 @@ public class CharacterMovement : MonoBehaviour
     {
         OVRInput.Update();
         OVRInput.FixedUpdate();
-        //float translation = Input.GetAxis("Vertical") * speed;
-        //float straffe = Input.GetAxis("Horizontal") * speed;
-        //translation *= Time.deltaTime;
-        //straffe *= Time.deltaTime;
+        float keyboardtrans = Input.GetAxis("Vertical") * speed;
+        float straffe = Input.GetAxis("Horizontal") * speed;
+        keyboardtrans *= Time.deltaTime;
+        straffe *= Time.deltaTime;
 
-        //transform.Translate(straffe, 0, translation);
+        transform.Translate(straffe, 0, keyboardtrans);
 
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
