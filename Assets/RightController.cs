@@ -20,7 +20,7 @@ public class RightController : MonoBehaviour
         laser.SetPosition(1, transform.position + transform.forward * 100);
         
         RaycastHit hit;
-        Debug.Log(go);
+       // Debug.Log(go);
         if(prev != null)
         {
             prev.SendMessage("OnVRExit");
@@ -31,7 +31,7 @@ public class RightController : MonoBehaviour
             if (hit.collider != null)
             {
                 
-                Debug.Log(hit.collider.gameObject);
+                //Debug.Log(hit.collider.gameObject);
                 hit.collider.gameObject.SendMessage("OnVREnter");
                 prev = hit.collider.gameObject;
                 if (go != hit.collider.gameObject)

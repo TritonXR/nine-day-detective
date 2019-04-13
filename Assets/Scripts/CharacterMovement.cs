@@ -32,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
         
         Vector2 translation = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick) * speed;
         translation *= Time.deltaTime;
-        Debug.Log(OVRInput.IsControllerConnected(OVRInput.Controller.RTouch));
+        // Debug.Log(OVRInput.IsControllerConnected(OVRInput.Controller.RTouch));
         transform.position += new Vector3(translation.x, 0, translation.y);
 
         if (Input.GetKeyDown("escape"))
