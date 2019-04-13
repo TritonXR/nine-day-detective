@@ -35,7 +35,7 @@ public class Horizontal_Movement : MonoBehaviour
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {
             Debug.Log("moving code is running");
-            if (hit.collider.isTrigger)
+            if (hit.collider.gameObject.name == "HandleCollider" && hit.collider.isTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {

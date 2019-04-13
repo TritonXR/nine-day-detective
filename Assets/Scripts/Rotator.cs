@@ -9,6 +9,12 @@ public class Rotator : MonoBehaviour
     public float closeang = 0f;
     private float openlength = .4f;
     private bool open = false;
+
+    public Camera camera;
+
+    //variables for casting the ray
+    float rayLength = 10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +24,7 @@ public class Rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(trigger.highlighted)
         {
             Open();
@@ -25,12 +32,30 @@ public class Rotator : MonoBehaviour
         {
             Close();
         }
+        */
+
+        RaycastHit DrawerHit;
+        Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+
+        if (Physics.Raycast(cursorRay, out DrawerHit, rayLength))
+        {
+            Debug.Log("hitting Drawer2");
+            if (DrawerHit.collider.gameObject.name == "Drawer2Handle" && DrawerHit.collider.isTrigger)
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse1))
+                {
+                    Debug.Log("Handle was clicked");
+                    open = true;
+                }
+            }
+        }
+
         float updateamt = (openang - closeang) / openlength * Time.deltaTime;
         if (open)
         {
             if (transform.rotation.y < openang)
             {
-                transform.Rotate(0, updateamt, 0);
+                transform.Rotate(0, updateamt, 0, Space.Self);
             }
             if (transform.rotation.y >= openang)
             {
