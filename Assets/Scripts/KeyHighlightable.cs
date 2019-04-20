@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OVRSimpleJSON;
+using OVRTouchSample;
 
 public class KeyHighlightable : MonoBehaviour
 {
@@ -32,7 +34,9 @@ public class KeyHighlightable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !finished)
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
+        if ((Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.Button.One)) && !finished)
         {
             Debug.Log("button pressed");
             // Get buttons pressed 
@@ -40,14 +44,11 @@ public class KeyHighlightable : MonoBehaviour
             {
                 if (triggers[i].highlighted)
                 {
-                    if(current.Length == 0 || current[current.Length-1] != i)
-                    {
-                        current += i;
-                    }
+                    current += i;
                 }
 
             }
-
+            Debug.Log("Current");
             // Compare current
             if (current.Length == 4)
             {
@@ -72,7 +73,7 @@ public class KeyHighlightable : MonoBehaviour
 
         for (int i = 0; i < triggers.Length; i++)
         {
-            int num = current.IndexOf(i.ToString());
+            int num = current.LastIndexOf(i.ToString());
             Debug.Log(this.histcolor[0]);
             Renderer rend = triggers[i].transform.parent.GetComponentInParent<Renderer>();
             if (num != -1)
