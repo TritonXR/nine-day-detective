@@ -14,9 +14,10 @@ public class KeyHighlightable : MonoBehaviour
 	public bool CodeSolved; 
 
 	public Highlightable[] triggers;
-    bool finished = false;
-    float timer = 0;
-    float DELAY = .5f;
+    public bool finished = false;
+    public float timer = 0;
+    float DELAY = 1.2f;
+    float BLINK = .2f;
 
 	void Start() 
 	{
@@ -31,7 +32,7 @@ public class KeyHighlightable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !finished)
         {
             Debug.Log("button pressed");
             // Get buttons pressed 
@@ -39,24 +40,12 @@ public class KeyHighlightable : MonoBehaviour
             {
                 if (triggers[i].highlighted)
                 {
-                    current += i;
+                    if(current.Length == 0 || current[current.Length-1] != i)
+                    {
+                        current += i;
+                    }
                 }
 
-            }
-
-            for (int i = 0; i < triggers.Length; i++)
-            {
-                int num = current.IndexOf(i.ToString());
-                Debug.Log(this.histcolor[0]);
-                Renderer rend = triggers[i].transform.parent.GetComponentInParent<Renderer>();
-                if (num != -1)
-                {
-                    rend.material.SetColor("_Color", histcolor[num]);
-                }
-                else
-                {
-                    rend.material.SetColor("_Color", Color.white);
-                }
             }
 
             // Compare current
@@ -65,36 +54,60 @@ public class KeyHighlightable : MonoBehaviour
                 finished = true;
             }
 
-            if (finished)
-            {
-                timer += Time.deltaTime;
-            }
-            if (timer >= DELAY)
-            {
-                finished = false;
-                timer = 0;
-                Clear();
-            }
-
-            // For testing
-            Debug.Log("inputted code is: " + current);
             if (CodeSolved)
             {
                 Debug.Log("CodeSolved!");
+            }
+        }
+        if (finished)
+        {
+            timer += Time.deltaTime;
+        }
+        if (timer >= DELAY)
+        {
+            finished = false;
+            timer = 0;
+            Clear();
+        }
+
+        for (int i = 0; i < triggers.Length; i++)
+        {
+            int num = current.IndexOf(i.ToString());
+            Debug.Log(this.histcolor[0]);
+            Renderer rend = triggers[i].transform.parent.GetComponentInParent<Renderer>();
+            if (num != -1)
+            {
+                rend.material.SetColor("_Color", histcolor[num]);
+            }
+            else
+            {
+                rend.material.SetColor("_Color", Color.white);
+            }
+            if(finished)
+            {
+                if((int)(timer / BLINK) % 2 == 0)
+                {
+                    rend.material.SetColor("_Color", Color.white);
+                } else
+                {
+                    if (current.Equals(CORRECT))
+                    {
+                        rend.material.SetColor("_Color", Color.green);
+                    } else
+                    {
+                        rend.material.SetColor("_Color", Color.red);
+                    }
+                }
             }
         }
     }
 
     void Clear()
     {
+        current = "";
         if (current.Equals(CORRECT))
         {
             CodeSolved = true;
-        }
-        else
-        {
-            // Reset current
-            current = "";
         }
     }
 
