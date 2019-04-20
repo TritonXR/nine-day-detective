@@ -58,30 +58,32 @@ public class KeyHighlightable : MonoBehaviour
                     rend.material.SetColor("_Color", Color.white);
                 }
             }
-        }
 
-        // Compare current
-        if (current.Length == 4) {
-            finished = true;
-        }
+            // Compare current
+            if (current.Length == 4)
+            {
+                finished = true;
+            }
 
-        if (finished)
-        {
-            timer += Time.deltaTime;
+            if (finished)
+            {
+                timer += Time.deltaTime;
+            }
+            if (timer >= DELAY)
+            {
+                finished = false;
+                timer = 0;
+                Clear();
+            }
+
+            // For testing
+            Debug.Log("inputted code is: " + current);
+            if (CodeSolved)
+            {
+                Debug.Log("CodeSolved!");
+            }
         }
-        if(timer >= DELAY)
-        {
-            finished = false;
-            timer = 0;
-            Clear();
-        }
-		
-		// For testing
-		Debug.Log("inputted code is: " + current);
-		if (CodeSolved) {
-			Debug.Log("CodeSolved!");
-		}
-	}
+    }
 
     void Clear()
     {
@@ -95,10 +97,5 @@ public class KeyHighlightable : MonoBehaviour
             current = "";
         }
     }
-
-   
-
-
-
 
 }
