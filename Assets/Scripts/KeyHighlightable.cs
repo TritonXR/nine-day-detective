@@ -7,76 +7,74 @@ public class KeyHighlightable : MonoBehaviour
 	// Variables for game logic
 	const string CORRECT = "4190"; 
 	// The current combination
-	string current;  
+	string current;
+    Color[] histcolor;
 
 	// Communicates when the correct code is inputted 
 	public bool CodeSolved; 
 
 	public Highlightable[] triggers;
+    bool finished = false;
+    float timer = 0;
+    float DELAY = .5f;
 
 	void Start() 
 	{
 		current = "";
 		CodeSolved = false;
-	}
+        histcolor = new Color[4];
+        histcolor[0] = Color.red;
+        histcolor[1] = Color.yellow;
+        histcolor[2] = Color.blue;
+        histcolor[3] = Color.magenta;
+    }
 
-	void Update() 
-	{
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("button pressed");
-            // Get buttons pressed
-            if (triggers[0].highlighted == true)
+            // Get buttons pressed 
+            for (int i = 0; i < triggers.Length; i++)
             {
-                current += "1";
+                if (triggers[i].highlighted)
+                {
+                    current += i;
+                }
+
             }
-            if (triggers[1].highlighted == true)
+
+            for (int i = 0; i < triggers.Length; i++)
             {
-                current += "2";
-            }
-            if (triggers[2].highlighted == true)
-            {
-                current += "3";
-            }
-            if (triggers[3].highlighted == true)
-            {
-                current += "4";
-            }
-            if (triggers[4].highlighted == true)
-            {
-                current += "5";
-            }
-            if (triggers[5].highlighted == true)
-            {
-                current += "6";
-            }
-            if (triggers[6].highlighted == true)
-            {
-                current += "7";
-            }
-            if (triggers[7].highlighted == true)
-            {
-                current += "8";
-            }
-            if (triggers[8].highlighted == true)
-            {
-                current += "9";
-            }
-            if (triggers[9].highlighted == true)
-            {
-                current += "0";
+                int num = current.IndexOf(i.ToString());
+                Debug.Log(this.histcolor[0]);
+                Renderer rend = triggers[i].transform.parent.GetComponentInParent<Renderer>();
+                if (num != -1)
+                {
+                    rend.material.SetColor("_Color", histcolor[num]);
+                }
+                else
+                {
+                    rend.material.SetColor("_Color", Color.white);
+                }
             }
         }
 
         // Compare current
         if (current.Length == 4) {
-			if (current.Equals(CORRECT)) {
-				CodeSolved = true;
-			} else {
-				// Reset current
-				current = "";
-			}
-		}
+            finished = true;
+        }
+
+        if (finished)
+        {
+            timer += Time.deltaTime;
+        }
+        if(timer >= DELAY)
+        {
+            finished = false;
+            timer = 0;
+            Clear();
+        }
 		
 		// For testing
 		Debug.Log("inputted code is: " + current);
@@ -84,6 +82,19 @@ public class KeyHighlightable : MonoBehaviour
 			Debug.Log("CodeSolved!");
 		}
 	}
+
+    void Clear()
+    {
+        if (current.Equals(CORRECT))
+        {
+            CodeSolved = true;
+        }
+        else
+        {
+            // Reset current
+            current = "";
+        }
+    }
 
    
 
