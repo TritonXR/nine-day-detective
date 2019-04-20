@@ -7,7 +7,7 @@ public class Rotator : MonoBehaviour
     public Highlightable trigger;
     public float openang = .8f;
     public float closeang = 0f;
-    private float openlength = .4f;
+    private float openlength = .1f;
     private bool open = false;
 
     public Camera camera;

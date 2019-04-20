@@ -354,6 +354,7 @@
     <Compile Include="Assets\Scripts\Highlighter.cs" />
     <Compile Include="Assets\Scripts\Horizontal_Movement.cs" />
     <Compile Include="Assets\Scripts\KeyHighlightable.cs" />
+    <Compile Include="Assets\Scripts\PuzzleHighlightable.cs" />
     <Compile Include="Assets\Scripts\PuzzleUI.cs" />
     <Compile Include="Assets\Scripts\ReticleSelector.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
