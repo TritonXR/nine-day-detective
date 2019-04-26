@@ -6,13 +6,16 @@ using UnityEngine;
 
 public class PuzzleHighlightable : MonoBehaviour
 {
-    // Variables for game logic
-    int[] correctArray = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    // Current array - preset
-    int[] currentArray = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    // Correct array - preset
+    int[] correctArray = new int[10] { 0, 1, 2, 3, 4, 5, 6, 8, 7 };
 
-    // Pieces  of the puzzle 
-    public Highlightable[] pieces;
+    // Current array
+    int[] currentArray = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+    // Empty tile - preset
+    int emptyTile = 8;
+
+    // Tiles  of the puzzle 
+    public Highlightable[] tiles;
     bool finished = false;
 
     // Start is called before the first frame update
@@ -23,8 +26,25 @@ public class PuzzleHighlightable : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        // TODO for loop and logic at each index -  should i preset?
+    { 
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
+        if ((Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.Button.One)) && !finished) { 
 
+            // Check every button
+            for (int i = 0; i < tiles.Length; i++)
+            {
+
+                if (tiles[i].highlighted)
+                {
+                    if((i == emptyTile - 3) || (i == emptyTile + 3) || (i == emptyTile + 1 && emptyTile % 3 != 2) || (i == emptyTile - 1 && emptyTile % 3 != 0))
+                    {
+                        // TODO: implement swap in correct array and emptytile change
+                    }
+
+                }
+            }
+	    }
     }
+
 }
