@@ -7,10 +7,10 @@ using UnityEngine;
 public class PuzzleHighlightable : MonoBehaviour
 {
     // Correct array - preset
-    int[] correctArray = new int[10] { 0, 1, 2, 3, 4, 5, 6, 8, 7 };
+    int[] correctArray = new int[9] { 0, 1, 2, 3, 4, 5, 6, 8, 7 };
 
     // Current array
-    int[] currentArray = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+    int[] currentArray = new int[9] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
     // Empty tile - preset
     int emptyTile = 8;
 
