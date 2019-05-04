@@ -12889,15 +12889,15 @@ RectTransform:
   m_GameObject: {fileID: 1389422769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.0008321248, y: 0.0008321248, z: 0.0008321248}
   m_Children: []
   m_Father: {fileID: 1970667512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000026447, y: 0.000033292}
+  m_SizeDelta: {x: 2048, y: 1024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389422771
 MonoBehaviour:
@@ -12919,7 +12919,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 72652bb38922643f995a43a8a1cdb92b, type: 3}
+  m_Texture: {fileID: 2800000, guid: c6e85d87ae745544197bf18309ca1b74, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -28199,7 +28199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1970667509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28293,7 +28293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 1389422771}
-  target: {fileID: 0}
+  target: {fileID: 1162692425}
   lookingAtBook: 0
   bookOpen: 0
 --- !u!1001 &1993992007

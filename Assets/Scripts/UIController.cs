@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour {
     public RawImage popup;
-    public GameObject target;
+    public Highlightable target;
     float threshold = 10;
     public bool lookingAtBook = false;
     public bool bookOpen = false;
@@ -19,7 +19,14 @@ public class UIController : MonoBehaviour {
 	void Update () {
         // Door
         if((target.transform.position - transform.position).magnitude < threshold) {
-            popup.gameObject.SetActive(true);
+            if(target.highlighted && Input.GetKeyDown(KeyCode.Space))
+            {
+                popup.gameObject.SetActive(!popup.gameObject.activeSelf);
+            }
+            else if(Input.GetKeyDown(KeyCode.Space))
+            {
+                popup.gameObject.SetActive(false);
+            }
         } else {
             popup.gameObject.SetActive(false);
         }
