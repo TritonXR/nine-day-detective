@@ -44,10 +44,17 @@ public class KeyHighlightable : MonoBehaviour
             {
                 if (triggers[i].highlighted)
                 {
-                    current += i;
+                    if (i < 10)
+                    {
+                        current += i;
+                    }
+                    else
+                    {
+                        current = current.Substring(0, current.Length - 1);
+                    }
                 }
-
             }
+
             Debug.Log("Current");
             // Compare current
             if (current.Length == 4)
@@ -89,7 +96,8 @@ public class KeyHighlightable : MonoBehaviour
                 if((int)(timer / BLINK) % 2 == 0)
                 {
                     rend.material.SetColor("_Color", Color.white);
-                } else
+                }
+                else
                 {
                     if (current.Equals(CORRECT))
                     {
