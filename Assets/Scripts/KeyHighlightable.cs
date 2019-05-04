@@ -9,7 +9,7 @@ public class KeyHighlightable : MonoBehaviour
 	// Variables for game logic
 	const string CORRECT = "4190"; 
 	// The current combination
-	string current;
+	public string current;
     Color[] histcolor;
 
 	// Communicates when the correct code is inputted 
@@ -91,7 +91,7 @@ public class KeyHighlightable : MonoBehaviour
             {
                 rend.material.SetColor("_Color", Color.white);
             }
-            if(finished)
+            if(finished && timer > DELAY/2)
             {
                 if((int)(timer / BLINK) % 2 == 0)
                 {
