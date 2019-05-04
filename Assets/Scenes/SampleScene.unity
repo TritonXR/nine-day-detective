@@ -2278,6 +2278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68ca6386435bea488995cb27005d13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  current: 
   CodeSolved: 0
   triggers:
   - {fileID: 235866260}
