@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CupRotator : MonoBehaviour
 {
+    public string colliderName;
     private bool cursorHits = false;
     private bool cupFlipped = false;
     float speed = -0.01f;
@@ -29,7 +30,7 @@ public class CupRotator : MonoBehaviour
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {
             Debug.Log("in cup flip");
-            if (hit.collider.gameObject.name == "CupCollider" && hit.collider.isTrigger)
+            if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {

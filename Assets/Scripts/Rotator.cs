@@ -5,10 +5,15 @@ using UnityEngine;
 public class Rotator : MonoBehaviour
 {
     public Highlightable trigger;
-    public float openang = .8f;
-    public float closeang = 0f;
-    private float openlength = .1f;
+    public string colliderName;
+    public float angSpeed = 10.0f;
+    private float maxOpen = 82.0f;
+    private float maxClose = 0.0f;
+    private float currentOpenAmt = 0f;
+    private bool opening = false;
+    private bool closing = false;
     private bool open = false;
+    
 
     public Camera camera;
 
@@ -24,15 +29,7 @@ public class Rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(trigger.highlighted)
-        {
-            Open();
-        } else
-        {
-            Close();
-        }
-        */
+
 
         RaycastHit DrawerHit;
         Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
@@ -45,43 +42,55 @@ public class Rotator : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
                     Debug.Log("Handle was clicked");
-                    open = true;
+                    if (open == false)
+                    { 
+                        opening = true;
+                    }
+                    else
+                    {
+                        closing = true;
+                    }
                 }
             }
         }
 
-        float updateamt = (openang - closeang) / openlength * Time.deltaTime;
-        if (open)
+        float updateamt = angSpeed; //* Time.deltaTime;
+        if (opening)
         {
-            if (transform.rotation.y < openang)
+            if (currentOpenAmt < maxOpen)
             {
                 transform.Rotate(0, updateamt, 0, Space.Self);
-            }
-            if (transform.rotation.y >= openang)
+                currentOpenAmt += updateamt;
+            } 
+            else
             {
-                transform.rotation = new Quaternion(0, openang, 0, 0);
+                opening = false;
+                open = true;
             }
         }
-        else
+
+        if (closing)
         {
-            if (transform.rotation.y > closeang)
+            if (currentOpenAmt > maxClose)
             {
-                transform.Rotate(0, -1*updateamt, 0);
+                transform.Rotate(0, -updateamt, 0, Space.Self);
+                currentOpenAmt -= updateamt;
             }
-            if (transform.rotation.y <= closeang)
+            else
             {
-                transform.rotation = new Quaternion(0, closeang, 0, 0);
+                closing = false;
+                open = false;
             }
         }
     }
 
     public void Open()
     {
-        open = true;
+        opening = true;
     }
 
     public void Close()
     {
-        open = false;
+        opening = false;
     }
 }

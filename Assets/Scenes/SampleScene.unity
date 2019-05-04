@@ -1574,6 +1574,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150824362}
   m_Mesh: {fileID: 4300048, guid: b4366af2591520e4da5c77c60aa595fc, type: 3}
+--- !u!1 &162385896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 162385897}
+  - component: {fileID: 162385900}
+  - component: {fileID: 162385899}
+  - component: {fileID: 162385898}
+  m_Layer: 0
+  m_Name: CupCollider3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &162385897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162385896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.091, y: -0.251, z: 0.572}
+  m_LocalScale: {x: 1.2693719, y: 1.2693719, z: 1.2693719}
+  m_Children: []
+  m_Father: {fileID: 1608857319}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &162385898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162385896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &162385899
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162385896}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &162385900
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162385896}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &163088968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,8 +2958,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262985922}
-  m_LocalRotation: {x: -0, y: -0.011317234, z: -0, w: 0.999936}
-  m_LocalPosition: {x: -1.92, y: 5, z: -0.51}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.858, y: 5.000001, z: -0.47476768}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663837139}
@@ -2880,7 +2971,7 @@ Transform:
   - {fileID: 1028208782}
   m_Father: {fileID: 1663837105}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -1.297, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &262985924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,8 +2985,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1162692425}
-  openang: 2
-  closeang: 1.3
+  colliderName: 
+  angSpeed: 10
   camera: {fileID: 282840813}
 --- !u!1001 &271895771
 PrefabInstance:
@@ -11471,7 +11562,7 @@ GameObject:
   - component: {fileID: 1204938554}
   - component: {fileID: 1204938553}
   m_Layer: 0
-  m_Name: CupCollider
+  m_Name: CupCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12358,6 +12449,97 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311426615}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1318355206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318355207}
+  - component: {fileID: 1318355210}
+  - component: {fileID: 1318355209}
+  - component: {fileID: 1318355208}
+  m_Layer: 0
+  m_Name: CupCollider1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1318355207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318355206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.35, y: 0.18, z: 0.02}
+  m_LocalScale: {x: 1.3099, y: 1.3099, z: 1.3099}
+  m_Children: []
+  m_Father: {fileID: 5958119223281662689}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1318355208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318355206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1318355209
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318355206}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1318355210
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318355206}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1321732325
 GameObject:
@@ -14389,6 +14571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2623ee0faebb6c64a982a0570095849d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderName: CupCollider2
   camera: {fileID: 282840813}
 --- !u!1001 &1518158985
 PrefabInstance:
@@ -15871,6 +16054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1608857319}
+  - component: {fileID: 1608857320}
   m_Layer: 0
   m_Name: mug_3
   m_TagString: Untagged
@@ -15886,13 +16070,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608857318}
   m_LocalRotation: {x: 0.77018577, y: -0, z: 0.63781965, w: 0}
-  m_LocalPosition: {x: 15.568, y: 10.39, z: 32.933}
+  m_LocalPosition: {x: 17.701, y: 7.775, z: 25.861}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1875092208}
+  - {fileID: 162385897}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 180, y: -79.259, z: 0}
+--- !u!114 &1608857320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608857318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2623ee0faebb6c64a982a0570095849d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderName: CupCollider3
+  camera: {fileID: 282840813}
 --- !u!1 &1609629628
 GameObject:
   m_ObjectHideFlags: 0
@@ -27282,7 +27481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875092207}
   m_LocalRotation: {x: -0.6961585, y: 0.123949304, z: 0.12394928, w: 0.69615835}
-  m_LocalPosition: {x: -6.2061806, y: 2.31, z: 4.600773}
+  m_LocalPosition: {x: 0.268, y: -0.251, z: 1.069}
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_Children: []
   m_Father: {fileID: 1608857319}
@@ -30199,14 +30398,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5958119223282017985}
-  m_LocalRotation: {x: 0.9654466, y: -0, z: -0.260601, w: 0}
-  m_LocalPosition: {x: 25.222, y: 10.103, z: 21.24}
+  m_LocalRotation: {x: -0.9652456, y: -0.0053165983, z: 0.26054677, w: -0.019696482}
+  m_LocalPosition: {x: 18.72, y: 7.64, z: 21.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5958119223281662691}
+  - {fileID: 1318355207}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 180, y: 30.210999, z: -0.000015258789}
+  m_LocalEulerAnglesHint: {x: 537.662, y: 30.210999, z: -0.000015258789}
 --- !u!4 &5958119223281662691
 Transform:
   m_ObjectHideFlags: 0
@@ -30214,13 +30414,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5958119223282017987}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -6.522, y: 2.31, z: 4.343}
+  m_LocalRotation: {x: -0.69615865, y: 0.12394835, z: 0.12394835, w: 0.69615865}
+  m_LocalPosition: {x: 0.15, y: -0.23, z: 0.99}
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_Children: []
   m_Father: {fileID: 5958119223281662689}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 20.191}
 --- !u!1 &5958119223282017985
 GameObject:
   m_ObjectHideFlags: 0
@@ -30230,6 +30430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5958119223281662689}
+  - component: {fileID: 5958119223282017986}
   m_Layer: 0
   m_Name: mug_1
   m_TagString: Untagged
@@ -30237,6 +30438,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5958119223282017986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958119223282017985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2623ee0faebb6c64a982a0570095849d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderName: CupCollider1
+  camera: {fileID: 282840813}
 --- !u!1 &5958119223282017987
 GameObject:
   m_ObjectHideFlags: 0
