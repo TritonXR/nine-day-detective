@@ -6,11 +6,9 @@ public class Horizontal_Movement : MonoBehaviour
 {
 
     public float xPosition;
-    public float yPosition;
-    public float zPosition;
+    public string handleName;
     private bool cursorHits = false;
     private bool drawerIsOpen = false;
-    public GameObject handle;
     float speed = -0.01f;
 
     public Camera camera;
@@ -35,7 +33,7 @@ public class Horizontal_Movement : MonoBehaviour
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {
             Debug.Log("moving code is running");
-            if (hit.collider.gameObject.name == "HandleCollider" && hit.collider.isTrigger)
+            if (hit.collider.gameObject.name == handleName && hit.collider.isTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
