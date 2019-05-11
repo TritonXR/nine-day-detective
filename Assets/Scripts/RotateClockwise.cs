@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateClockwise : MonoBehaviour
 {
     public Highlightable trigger;
-    public string colliderName;
+    public string handleName;
     public float angSpeed = 10.0f;
     private float maxOpen = 82.0f;
     private float maxClose = 0.0f;
@@ -36,7 +36,7 @@ public class RotateClockwise : MonoBehaviour
 
         if (Physics.Raycast(cursorRay, out Drawer2Hit, rayLength))
         {
-            if (Drawer2Hit.collider.gameObject.name == "Drawer2Handle" && Drawer2Hit.collider.isTrigger)
+            if (Drawer2Hit.collider.gameObject.name == handleName && Drawer2Hit.collider.isTrigger)
             {
                 Debug.Log("hitting Drawer2");
                 if (Input.GetKeyDown(KeyCode.Mouse1))

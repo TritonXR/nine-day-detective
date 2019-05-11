@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Keypad.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
@@ -342,8 +341,6 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
-    <Compile Include="Assets\Pickupable.cs" />
-    <Compile Include="Assets\RightController.cs" />
     <Compile Include="Assets\Scripts\Cam.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\CupRotator.cs" />
@@ -352,13 +349,18 @@
     <Compile Include="Assets\Scripts\Highlighter.cs" />
     <Compile Include="Assets\Scripts\Horizontal_Movement.cs" />
     <Compile Include="Assets\Scripts\KeyHighlightable.cs" />
+    <Compile Include="Assets\Scripts\Keypad.cs" />
+    <Compile Include="Assets\Scripts\Pickupable.cs" />
     <Compile Include="Assets\Scripts\PuzzleHighlightable.cs" />
     <Compile Include="Assets\Scripts\PuzzleUI.cs" />
     <Compile Include="Assets\Scripts\ReticleSelector.cs" />
+    <Compile Include="Assets\Scripts\RightController.cs" />
     <Compile Include="Assets\Scripts\RotateClockwise.cs" />
+    <Compile Include="Assets\Scripts\RotateCounterClockwise.cs" />
+    <Compile Include="Assets\Scripts\RotateCounterTop.cs" />
+    <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
-    <Compile Include="Assets\Test.cs" />
-    <Compile Include="Assets\yeet.cs" />
+    <Compile Include="Assets\Scripts\YHorizontalMove.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Samples\CrossPlatform\Readme.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
