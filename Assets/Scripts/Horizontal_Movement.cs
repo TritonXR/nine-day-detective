@@ -9,7 +9,7 @@ public class Horizontal_Movement : MonoBehaviour
     public string handleName;
     private bool cursorHits = false;
     private bool drawerIsOpen = false;
-    float speed = -0.01f;
+    float speed = -0.065f;
 
     public Camera camera;
 

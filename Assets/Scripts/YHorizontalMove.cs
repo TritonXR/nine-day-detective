@@ -9,7 +9,8 @@ public class YHorizontalMove : MonoBehaviour
     public string handleName;
     private bool cursorHits = false;
     private bool drawerIsOpen = false;
-    float speed = -0.01f;
+    public float stop = 2.1f;
+    float speed = -0.065f;
 
     public Camera camera;
 
@@ -60,18 +61,18 @@ public class YHorizontalMove : MonoBehaviour
     {
         if (cursorHits == true)
         {
-            Debug.Log("in OpenDrawer");
+
             if (yPosition > -2.0f)
             {
 
-                Debug.Log("opening");
+  
                 transform.Translate(speed, 0, 0 );
                 yPosition += speed;
 
             }
             else
             {
-                Debug.Log("stoops");
+
                 cursorHits = false;
                 drawerIsOpen = true;
             }
@@ -82,10 +83,9 @@ public class YHorizontalMove : MonoBehaviour
     {
         if (cursorHits == true)
         {
-            Debug.Log("in CloseDrawer");
-            if (yPosition < 2.1f)
+
+            if (yPosition < stop)
             {
-                Debug.Log("closing");
                 transform.Translate(-speed, 0, 0);
                 yPosition -= speed;
             }
