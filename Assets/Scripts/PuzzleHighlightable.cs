@@ -75,7 +75,7 @@ public class PuzzleHighlightable : MonoBehaviour
                     {
                         str += currentArray[j] + ",";
                     }
-                    Debug.Log("Array is " + str);
+                    //Debug.Log("Array is " + str);
                     
                 }
             }
