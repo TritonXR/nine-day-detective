@@ -36,9 +36,9 @@ public class KeyHighlightable : MonoBehaviour
     {
         OVRInput.Update();
         OVRInput.FixedUpdate();
-        if ((Input.GetKeyDown(KeyCode.E) || OVRInput.GetDown(OVRInput.Button.One)) && !finished)
+        if ((Input.GetKeyDown(Constants.interactionKey) || OVRInput.GetDown(OVRInput.Button.One)) && !finished)
         {
-            //Debug.Log("button pressed");
+            Debug.Log("button pressed");
             // Get buttons pressed 
             for (int i = 0; i < triggers.Length; i++)
             {
@@ -55,7 +55,7 @@ public class KeyHighlightable : MonoBehaviour
                 }
             }
 
-            //Debug.Log("Current");
+            Debug.Log("Current");
             // Compare current
             if (current.Length == 4)
             {
@@ -81,7 +81,7 @@ public class KeyHighlightable : MonoBehaviour
         for (int i = 0; i < triggers.Length; i++)
         {
             int num = current.LastIndexOf(i.ToString());
-            //Debug.Log(this.histcolor[0]);
+            Debug.Log(this.histcolor[0]);
             Renderer rend = triggers[i].transform.parent.GetComponentInParent<Renderer>();
             if (num != -1)
             {

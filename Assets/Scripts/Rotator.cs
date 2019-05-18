@@ -39,7 +39,7 @@ public class Rotator : MonoBehaviour
             //Debug.Log("hitting Drawer2");
             if (DrawerHit.collider.gameObject.name == "Drawer2Handle" && DrawerHit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse1))
+                if (Input.GetKeyDown(Constants.interactionKey))
                 {
                     Debug.Log("Handle was clicked");
                     if (open == false)

@@ -9,7 +9,7 @@ public class Horizontal_Movement : MonoBehaviour
     public string handleName;
     private bool cursorHits = false;
     private bool drawerIsOpen = false;
-    float speed = -0.01f;
+    float speed = -0.065f;
 
     public Camera camera;
 
@@ -35,7 +35,7 @@ public class Horizontal_Movement : MonoBehaviour
             //Debug.Log("moving code is running");
             if (hit.collider.gameObject.name == handleName && hit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse1))
+                if (Input.GetKeyDown(Constants.interactionKey))
                 {
                     Debug.Log("Handle was clicked");
                     cursorHits = true;
