@@ -45,6 +45,7 @@ public class PuzzleHighlightable : MonoBehaviour
                 {
                     // Gets index of emptytile in currentArray
                     int emptyIndex = Array.IndexOf(currentArray, emptyTile);
+                    Debug.Log(emptyIndex);
 
                     if ( (i < currentArray.Length) && ( (i == emptyIndex - 3) || (i == emptyIndex + 3) || (i == emptyIndex + 1 && emptyIndex % 3 != 2)
                         || (i == emptyIndex - 1 && emptyIndex % 3 != 0) ) )
@@ -105,8 +106,8 @@ public class PuzzleHighlightable : MonoBehaviour
     // Setup the puzzle
     void Setup()
     {
-        Color[] currColors = new Color[9] {Color.red, Color.yellow, Color.green, Color.cyan,
-        Color.blue, Color.magenta, Color.black, Color.grey, Color.white };
+        currColors = new Color[9] {Color.red, Color.yellow, Color.green, Color.cyan,
+                Color.blue, Color.magenta, Color.black, Color.grey, Color.white };
 
         currentArray = new int[9] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
 
