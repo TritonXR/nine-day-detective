@@ -32,7 +32,7 @@ public class CupRotator : MonoBehaviour
             Debug.Log("in cup flip");
             if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse1))
+                if (Input.GetKeyDown(Constants.interactionKey))
                 {
                     Debug.Log("Cup was clicked");
                     cursorHits = true;

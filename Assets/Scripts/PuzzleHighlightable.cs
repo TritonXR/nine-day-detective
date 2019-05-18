@@ -29,7 +29,7 @@ public class PuzzleHighlightable : MonoBehaviour
     { 
         OVRInput.Update();
         OVRInput.FixedUpdate();
-        if ((Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.Button.One)) && !finished) { 
+        if ((Input.GetKeyDown(Constants.interactionKey) || OVRInput.GetDown(OVRInput.Button.One)) && !finished) { 
 
             // Check every button
             for (int i = 0; i < tiles.Length; i++)
