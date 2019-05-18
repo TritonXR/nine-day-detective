@@ -15,7 +15,7 @@ public class Highlightable : MonoBehaviour {
 
     public void OnVREnter() {
         GetComponent<Renderer>().enabled = true;
-        Debug.Log(GetComponent<Renderer>());
+        //Debug.Log(GetComponent<Renderer>());
         highlighted = true;
     }
 
@@ -27,7 +27,7 @@ public class Highlightable : MonoBehaviour {
     public void Highlight()
     {
         GetComponent<Renderer>().enabled = true;
-        Debug.Log(GetComponent<Renderer>());
+        //Debug.Log(GetComponent<Renderer>());
         highlighted = true;
     }
 

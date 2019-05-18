@@ -29,7 +29,7 @@ public class CupRotator : MonoBehaviour
 
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {
-            Debug.Log("in cup flip");
+            //Debug.Log("in cup flip");
             if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))

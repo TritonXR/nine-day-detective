@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour {
 	void Update () {
         // Door
         if((target.transform.position - transform.position).magnitude < threshold) {
-            if(target.highlighted && Input.GetKeyDown(KeyCode.Space))
+            if(target.highlighted && Input.GetKeyDown(Constants.interactionKey))
             {
                 popup.gameObject.SetActive(!popup.gameObject.activeSelf);
             }

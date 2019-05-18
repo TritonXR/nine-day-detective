@@ -36,7 +36,7 @@ public class Rotator : MonoBehaviour
 
         if (Physics.Raycast(cursorRay, out DrawerHit, rayLength))
         {
-            Debug.Log("hitting Drawer2");
+            //Debug.Log("hitting Drawer2");
             if (DrawerHit.collider.gameObject.name == "Drawer2Handle" && DrawerHit.collider.isTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))

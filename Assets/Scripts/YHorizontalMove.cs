@@ -20,7 +20,7 @@ public class YHorizontalMove : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("It is starting");
+        //Debug.Log("It is starting");
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class YHorizontalMove : MonoBehaviour
 
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {
-            Debug.Log("moving code is running");
+            //Debug.Log("moving code is running");
             if (hit.collider.gameObject.name == handleName && hit.collider.isTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
