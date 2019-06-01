@@ -27,6 +27,8 @@ public class YHorizontalMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
 
         RaycastHit hit;
         Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
@@ -36,7 +38,8 @@ public class YHorizontalMove : MonoBehaviour
             //Debug.Log("moving code is running");
             if (hit.collider.gameObject.name == handleName && hit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(Constants.interactionKey))
+                //if (Input.GetKeyDown(Constants.interactionKey))
+                if (OVRInput.Get(OVRInput.Button.One))
                 {
                     Debug.Log("Handle was clicked");
                     cursorHits = true;

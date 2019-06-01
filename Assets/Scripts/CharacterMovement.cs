@@ -18,6 +18,7 @@ public class CharacterMovement : MonoBehaviour
     {
         OVRInput.Update();
         OVRInput.FixedUpdate();
+        
         float keyboardtrans = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
         keyboardtrans *= Time.deltaTime;
@@ -25,11 +26,7 @@ public class CharacterMovement : MonoBehaviour
 
         transform.Translate(straffe, 0, keyboardtrans);
 
-        if (OVRInput.GetDown(OVRInput.Button.One))
-        {
-            Debug.Log("PressedOne");
-        }
-        
+
         Vector2 translation = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick) * speed;
         translation *= Time.deltaTime;
         // Debug.Log(OVRInput.IsControllerConnected(OVRInput.Controller.RTouch));

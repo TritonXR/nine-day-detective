@@ -23,13 +23,13 @@ public class RotateCounterClockwise : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("in drawer2 script");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
 
         RaycastHit Drawer2Hit;
         Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
@@ -39,7 +39,8 @@ public class RotateCounterClockwise : MonoBehaviour
             if (Drawer2Hit.collider.gameObject.name == handleName && Drawer2Hit.collider.isTrigger)
             {
                 Debug.Log("hitting Drawer1");
-                if (Input.GetKeyDown(Constants.interactionKey))
+                if (OVRInput.Get(OVRInput.Button.One))
+                //if (Input.GetKeyDown(Constants.interactionKey))
                 {
                     Debug.Log("Handle 1 was clicked");
                     if (open == false)

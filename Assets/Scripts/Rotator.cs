@@ -29,6 +29,8 @@ public class Rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
 
 
         RaycastHit DrawerHit;
@@ -36,10 +38,10 @@ public class Rotator : MonoBehaviour
 
         if (Physics.Raycast(cursorRay, out DrawerHit, rayLength))
         {
-            //Debug.Log("hitting Drawer2");
             if (DrawerHit.collider.gameObject.name == "Drawer2Handle" && DrawerHit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(Constants.interactionKey))
+                //f (Input.GetKeyDown(Constants.interactionKey)) 
+                if (OVRInput.Get(OVRInput.Button.One)) 
                 {
                     Debug.Log("Handle was clicked");
                     if (open == false)

@@ -23,6 +23,8 @@ public class CupRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
 
         RaycastHit hit;
         Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
@@ -32,9 +34,9 @@ public class CupRotator : MonoBehaviour
             //Debug.Log("in cup flip");
             if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(Constants.interactionKey))
+                //if (Input.GetKeyDown(Constants.interactionKey))
+                if (OVRInput.Get(OVRInput.Button.One))
                 {
-                    Debug.Log("Cup was clicked");
                     cursorHits = true;
                 }
             }

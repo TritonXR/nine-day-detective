@@ -17,9 +17,13 @@ public class UIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
+
         // Door
-        if((target.transform.position - transform.position).magnitude < threshold) {
-            if(target.highlighted && Input.GetKeyDown(Constants.interactionKey))
+        if ((target.transform.position - transform.position).magnitude < threshold) {
+            // if ( OVRInput.Get(OVRInput.Button.One))
+            if (target.highlighted && OVRInput.Get(OVRInput.Button.One))
             {
                 popup.gameObject.SetActive(!popup.gameObject.activeSelf);
             }

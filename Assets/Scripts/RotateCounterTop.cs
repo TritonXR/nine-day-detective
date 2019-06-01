@@ -29,7 +29,8 @@ public class RotateCounterTop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        OVRInput.Update();
+        OVRInput.FixedUpdate();
 
         RaycastHit CounterHit;
         Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
@@ -38,8 +39,8 @@ public class RotateCounterTop : MonoBehaviour
         {
             if (CounterHit.collider.gameObject.name == counterName && CounterHit.collider.isTrigger)
             {
-                Debug.Log("hitting Counter");
-                if (Input.GetKeyDown(Constants.interactionKey))
+                if (OVRInput.Get(OVRInput.Button.One))
+                //if (Input.GetKeyDown(Constants.interactionKey))
                 {
                     if (open == false)
                     {
