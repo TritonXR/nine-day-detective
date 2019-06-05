@@ -38,8 +38,7 @@ public class YHorizontalMove : MonoBehaviour
             //Debug.Log("moving code is running");
             if (hit.collider.gameObject.name == handleName && hit.collider.isTrigger)
             {
-                //if (Input.GetKeyDown(Constants.interactionKey))
-                if (OVRInput.Get(OVRInput.Button.One))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
                 {
                     Debug.Log("Handle was clicked");
                     cursorHits = true;

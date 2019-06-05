@@ -19,9 +19,11 @@ public class ReticleSelector : MonoBehaviour {
 	void Update () {
         RaycastHit hit;
         Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
 
         if (Physics.Raycast(ray, out hit))
         {
+            Debug.Log(hit.collider.gameObject.name);
             Highlightable target = hit.transform.GetComponent<Highlightable>();
             if (target != highlighted)
             {

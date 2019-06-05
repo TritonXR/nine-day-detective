@@ -32,14 +32,10 @@ public class CupRotator : MonoBehaviour
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {
             //Debug.Log("in cup flip");
-            Debug.Log(hit.collider.gameObject.name);
-            Debug.Log(colliderName);
-            Debug.Log(hit.collider.isTrigger);
             if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
                 Debug.Log("middle if reached");
-                //if (Input.GetKeyDown(Constants.interactionKey))
-                if (OVRInput.Get(OVRInput.Button.One))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
                 {
                     Debug.Log("cup pressed");
                     cursorHits = true;

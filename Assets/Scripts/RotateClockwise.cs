@@ -39,7 +39,7 @@ public class RotateClockwise : MonoBehaviour
             if (Drawer2Hit.collider.gameObject.name == handleName && Drawer2Hit.collider.isTrigger)
             {
                 Debug.Log("hitting Drawer2");
-                if (Input.GetKeyDown(KeyCode.Mouse1))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
                 {
                     Debug.Log("Handle 2 was clicked");
                     if (open == false)

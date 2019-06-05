@@ -36,7 +36,7 @@ public class Horizontal_Movement : MonoBehaviour
         {
             if (hit.collider.gameObject.name == handleName && hit.collider.isTrigger)
             {
-                if (OVRInput.Get(OVRInput.Button.One))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
                 //if (Input.GetKeyDown(Constants.interactionKey))
                 {
                     Debug.Log("Handle was clicked");

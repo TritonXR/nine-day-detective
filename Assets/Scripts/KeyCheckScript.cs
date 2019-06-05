@@ -25,7 +25,7 @@ public class KeyCheckScript : MonoBehaviour
         {
             if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
-                if (Input.GetKeyDown(Constants.interactionKey))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
                 {
                     Debug.Log("Box has been clicked");
                     if (!rend.enabled)

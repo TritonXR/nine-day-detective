@@ -41,7 +41,7 @@ public class Rotator : MonoBehaviour
             if (DrawerHit.collider.gameObject.name == "Drawer2Handle" && DrawerHit.collider.isTrigger)
             {
                 //f (Input.GetKeyDown(Constants.interactionKey)) 
-                if (OVRInput.Get(OVRInput.Button.One)) 
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)) 
                 {
                     Debug.Log("Handle was clicked");
                     if (open == false)

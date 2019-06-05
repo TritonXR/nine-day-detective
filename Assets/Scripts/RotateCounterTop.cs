@@ -39,8 +39,7 @@ public class RotateCounterTop : MonoBehaviour
         {
             if (CounterHit.collider.gameObject.name == counterName && CounterHit.collider.isTrigger)
             {
-                if (OVRInput.Get(OVRInput.Button.One))
-                //if (Input.GetKeyDown(Constants.interactionKey))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
                 {
                     if (open == false)
                     {
