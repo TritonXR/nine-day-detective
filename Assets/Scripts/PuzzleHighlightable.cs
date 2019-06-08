@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using UnityEngine.UI;
 
 public class PuzzleHighlightable : MonoBehaviour
 {
@@ -23,10 +23,14 @@ public class PuzzleHighlightable : MonoBehaviour
     Color[] currColors = new Color[9] {Color.red, Color.yellow, Color.green, Color.cyan,
         Color.blue, Color.magenta, Color.black, Color.grey, Color.white };
 
+    // Display Image
+    public Renderer ansCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
         Setup();
+        ansCanvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -96,11 +100,11 @@ public class PuzzleHighlightable : MonoBehaviour
             if (finished)
             {
                 Debug.Log("Puzzle solved!");
+                ansCanvas.enabled = true;
+                Debug.Log("Display" + ansCanvas.enabled);
             }
 
         }
-
-
     }
 
     // Setup the puzzle
@@ -119,6 +123,4 @@ public class PuzzleHighlightable : MonoBehaviour
         }
 
     }
-
-
 }

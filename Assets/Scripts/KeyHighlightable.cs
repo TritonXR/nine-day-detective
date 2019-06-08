@@ -28,9 +28,9 @@ public class KeyHighlightable : MonoBehaviour
 		CodeSolved = false;
         histcolor = new Color[4];
         histcolor[0] = Color.red;
-        histcolor[1] = Color.yellow;
-        histcolor[2] = Color.blue;
-        histcolor[3] = Color.magenta;
+        histcolor[1] = Color.green;
+        histcolor[2] = Color.yellow;
+        histcolor[3] = Color.blue;
     }
 
     void Update()
@@ -103,7 +103,6 @@ public class KeyHighlightable : MonoBehaviour
                 {
                     if (current.Equals(CORRECT))
                     {
-                        Debug.Log("nanithefaq");
                         rend.material.SetColor("_Color", Color.green);
                         SceneManager.LoadScene("End Scene");
                     } else

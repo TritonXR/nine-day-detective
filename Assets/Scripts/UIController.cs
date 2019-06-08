@@ -3,35 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour {
+public class UIController : MonoBehaviour
+{
     public RawImage popup;
+    public RawImage album;
     public Highlightable target;
     float threshold = 10;
     public bool lookingAtBook = false;
     public bool bookOpen = false;
+    
+    // Use this for initialization
+    void Start()
+    {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         OVRInput.Update();
         OVRInput.FixedUpdate();
 
         // Door
-        if ((target.transform.position - transform.position).magnitude < threshold) {
+        if ((target.transform.position - transform.position).magnitude < threshold)
+        {
             // if ( OVRInput.Get(OVRInput.Button.One))
             if (target.highlighted && (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)))
             {
                 popup.gameObject.SetActive(!popup.gameObject.activeSelf);
             }
-            else if(Input.GetKeyDown(KeyCode.E))
+            else if (Input.GetKeyDown(KeyCode.E))
             {
                 popup.gameObject.SetActive(false);
             }
-        } else {
+        }
+        else
+        {
             popup.gameObject.SetActive(false);
         }
         // Book
@@ -51,10 +58,15 @@ public class UIController : MonoBehaviour {
                     bookOpen = false;
                 }
             }
-            popup.gameObject.SetActive(bookOpen);
-        } else {
-            bookOpen = false;
+            album.gameObject.SetActive(bookOpen);
         }
-	}
+        else
+        {
+            bookOpen = false;
+            album.gameObject.SetActive(bookOpen);
+        }
+    
+
+    }
 
 }
