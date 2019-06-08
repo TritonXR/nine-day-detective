@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using OVRSimpleJSON;
 using OVRTouchSample;
+using UnityEngine.SceneManagement;
 
 public class KeyHighlightable : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class KeyHighlightable : MonoBehaviour
     {
         OVRInput.Update();
         OVRInput.FixedUpdate();
-        if (OVRInput.GetDown(OVRInput.Button.One) & !finished)
+        if ((Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)) & !finished)
         {
             Debug.Log("button pressed");
             // Get buttons pressed 
@@ -65,6 +66,7 @@ public class KeyHighlightable : MonoBehaviour
             if (CodeSolved)
             {
                 Debug.Log("CodeSolved!");
+                SceneManager.LoadScene("EndScene");
             }
         }
         if (finished)
@@ -101,7 +103,9 @@ public class KeyHighlightable : MonoBehaviour
                 {
                     if (current.Equals(CORRECT))
                     {
+                        Debug.Log("nanithefaq");
                         rend.material.SetColor("_Color", Color.green);
+                        SceneManager.LoadScene("End Scene");
                     } else
                     {
                         rend.material.SetColor("_Color", Color.red);
