@@ -27,8 +27,8 @@ public class UIController : MonoBehaviour
         // Door
         if ((target.transform.position - transform.position).magnitude < threshold)
         {
-            // if ( OVRInput.Get(OVRInput.Button.One))
-            if (target.highlighted && (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)))
+            // if ( OVRInut.GetDown(OVRInput.Button.One))
+            if (target.highlighted && (Input.GetKeyDown(Constants.interactionKey) || OVRInut.GetDown(Constants.interactionButton)))
             {
                 popup.gameObject.SetActive(!popup.gameObject.activeSelf);
             }
@@ -46,14 +46,14 @@ public class UIController : MonoBehaviour
         {
             if (lookingAtBook)
             {
-                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInut.GetDown(Constants.interactionButton))
                 {
                     bookOpen = !bookOpen;
                 }
             }
             else
             {
-                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInut.GetDown(Constants.interactionButton))
                 {
                     bookOpen = false;
                 }

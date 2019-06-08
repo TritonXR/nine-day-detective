@@ -27,7 +27,7 @@ public class KeyRenderer : MonoBehaviour
             if (hit.collider.gameObject.name == keyColliderName && hit.collider.isTrigger)
             {
                 Debug.Log("you have hit the key");
-                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInut.GetDown(Constants.interactionButton))
                 {
                     Debug.Log("You have obtained the key");
                     keyClicked = true; 

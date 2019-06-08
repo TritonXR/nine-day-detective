@@ -26,7 +26,7 @@ public class CupRotator : MonoBehaviour
         OVRInput.Update();
         OVRInput.FixedUpdate();
 
-        if (OVRInput.Get(Constants.interactionButton))
+        if (OVRInut.GetDown(Constants.interactionButton))
         {
             Debug.Log("Getting Feedback");
         }
@@ -39,7 +39,7 @@ public class CupRotator : MonoBehaviour
             if (hit.collider.gameObject.name == colliderName && hit.collider.isTrigger)
             {
                 Debug.Log("middle if reached");
-                if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
+                if (Input.GetKeyDown(Constants.interactionKey) || OVRInut.GetDown(Constants.interactionButton))
                 {
                     Debug.Log("cup pressed");
                     cursorHits = true;

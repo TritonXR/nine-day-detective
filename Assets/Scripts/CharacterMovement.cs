@@ -27,7 +27,7 @@ public class CharacterMovement : MonoBehaviour
         transform.Translate(straffe, 0, keyboardtrans);
 
 
-        Vector2 translation = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick) * speed;
+        Vector2 translation = OVRInut.GetDown(OVRInput.Axis2D.SecondaryThumbstick) * speed;
         translation *= Time.deltaTime;
 
         transform.position += new Vector3(translation.x, 0, translation.y);

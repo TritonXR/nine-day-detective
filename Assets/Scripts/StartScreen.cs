@@ -17,7 +17,7 @@ public class StartScreen : MonoBehaviour
         OVRInput.Update();
         OVRInput.FixedUpdate();
         //Input.GetKeyDown(Constants.interactionKey
-        if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)||waittime == 0)
+        if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.GetDown(Constants.interactionButton)||waittime == 0)
         {
             SceneManager.LoadScene("SampleSceneVR");
         }

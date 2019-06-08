@@ -37,7 +37,7 @@ public class KeyHighlightable : MonoBehaviour
     {
         OVRInput.Update();
         OVRInput.FixedUpdate();
-        if ((Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)) & !finished)
+        if ((Input.GetKeyDown(Constants.interactionKey) || OVRInut.GetDown(Constants.interactionButton)) & !finished)
         {
             Debug.Log("button pressed");
             // Get buttons pressed 
