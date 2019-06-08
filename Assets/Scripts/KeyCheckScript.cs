@@ -19,7 +19,8 @@ public class KeyCheckScript : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+        //Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+        Ray cursorRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));//for VR use
 
         if (Physics.Raycast(cursorRay, out hit, rayLength))
         {

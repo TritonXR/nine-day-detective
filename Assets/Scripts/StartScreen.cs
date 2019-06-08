@@ -10,16 +10,17 @@ public class StartScreen : MonoBehaviour
     void Start()
     {
     }
-
+    float waittime = 100f;
     // Update is called once per frame
     void Update()
     {
         OVRInput.Update();
         OVRInput.FixedUpdate();
         //Input.GetKeyDown(Constants.interactionKey
-        if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton))
+        if (Input.GetKeyDown(Constants.interactionKey) || OVRInput.Get(Constants.interactionButton)||waittime == 0)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("SampleSceneVR");
         }
+        waittime--;
     }
 }

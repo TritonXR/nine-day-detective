@@ -18,7 +18,9 @@ public class ReticleSelector : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         RaycastHit hit;
-        Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+        //Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         Debug.DrawRay(ray.origin, ray.direction, Color.red);
 
         if (Physics.Raycast(ray, out hit))

@@ -32,8 +32,8 @@ public class RotateClockwise : MonoBehaviour
 
 
         RaycastHit Drawer2Hit;
-        Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
-
+        //Ray cursorRay = camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
+        Ray cursorRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));//for VR use
         if (Physics.Raycast(cursorRay, out Drawer2Hit, rayLength))
         {
             if (Drawer2Hit.collider.gameObject.name == handleName && Drawer2Hit.collider.isTrigger)

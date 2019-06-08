@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Start Scene.unity
     guid: 3e3da312951141a4c98f004e2e4dc76c
+  - enabled: 1
+    path: Assets/Scenes/SampleSceneVR.unity
+    guid: 947178d17a95f114993771a51e89e414
   m_configObjects: {}
